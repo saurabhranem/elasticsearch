@@ -7,7 +7,7 @@ class NoteIndex(indexes.SearchIndex, indexes.Indexable):
     text = indexes.CharField(document=True, use_template=True)
     customer_name = indexes.CharField(model_attr='customer_name')
     order_date = indexes.DateTimeField(model_attr='order_date')
-    postal_code = indexes.DateTimeField(model_attr='postal_code')
+    postal_code = indexes.CharField(model_attr='postal_code')
 
     def get_model(self):
         return models.SalesDetails

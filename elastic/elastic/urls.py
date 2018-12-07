@@ -21,5 +21,5 @@ from django.conf.urls import url
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('elastic_search/', include('elastic_search.urls')),
-    url(r'^search/', include('haystack.urls')),
+    url(r'search/', include('haystack.urls')),
 ]
